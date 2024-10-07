@@ -9,6 +9,7 @@ import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
 import GitHub,{githubInfoLoader} from './components/Github/Github.jsx'
+import ErrorPage from "./error-page";
 // const router = createBrowserRouter([
 //   {
 //     path:'/',
@@ -36,7 +37,7 @@ import GitHub,{githubInfoLoader} from './components/Github/Github.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
+    <Route path='/' element={<Layout/>} errorElement={<ErrorPage/>}>
       <Route path='' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}/>
